@@ -1,0 +1,107 @@
+@use '../styles/variables.scss';
+@use './styles/breakpoints.scss';
+
+@mixin useFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$root-bottom-margin: 30px;
+@mixin root {
+    width: 100%;
+    margin-bottom: $root-bottom-margin;
+}
+
+//mixin for cropping space from top of text
+
+@mixin lhCrop($line-height) {
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((1 - #{$line-height}) * 0.8em);
+    }
+}
+
+@mixin cta_btn {
+    margin-top: variables.$gap;
+
+    a {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:after {
+            padding: 10px;
+            content: '>';
+            color: variables.$linkColor;
+        }
+    }
+}
+/*Font size mixins */
+@mixin text-sizes-sm {
+    font-size: variables.$text-size-body-xsm;
+
+    @include breakpoints.md {
+        font-size: variables.$text-size-body-sm;
+    }
+}
+@mixin text-sizes-md {
+    font-size: variables.$text-size-body-xsm;
+
+    @include breakpoints.md {
+        font-size: variables.$text-size-body-sm;
+    }
+    @include breakpoints.lg {
+        font-size: variables.$text-size-body-md;
+    }
+}
+@mixin text-sizes-lg {
+    font-size: variables.$text-size-body-xsm;
+
+    @include breakpoints.md {
+        font-size: variables.$text-size-body-md;
+    }
+    @include breakpoints.lg {
+        font-size: variables.$text-size-body-lg;
+    }
+}
+
+/*-------------------------------*/
+
+@mixin headline-sizes-sm {
+    font-weight: bold;
+    font-size: variables.$text-size-head-sm;
+
+    @include breakpoints.xl {
+        font-size: variables.$text-size-head-md;
+    }
+}
+
+@mixin headline-sizes-md {
+    font-weight: bold;
+    font-size: variables.$text-size-head-sm;
+
+    @include breakpoints.md {
+        font-size: variables.$text-size-head-sm;
+    }
+
+    @include breakpoints.lg {
+        font-size: variables.$text-size-head-md;
+    }
+}
+
+@mixin headline-sizes-lg {
+    font-weight: bold;
+    font-size: variables.$text-size-head-sm;
+
+    @include breakpoints.md {
+        font-size: variables.$text-size-head-md;
+    }
+    @include breakpoints.lg {
+        font-size: variables.$text-size-head-lg;
+    }
+}
+
+/*-----------------------------------*/

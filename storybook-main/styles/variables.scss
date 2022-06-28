@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+/* Global variables */
+$content-width: 80%;
+$max-main-width: 1200px;
+$aspect-ratio-4_3: math.div(4, 3);
+$aspect-ratio-16_9: math.div(16, 9);
+$aspect-ratio-3_4: math.div(3, 4);
+$gap: 20px;
+$logo-size: 100px;
+$logo-size-2: 60px;
+$logo-size-3: 40px;
+$logo-size-4: 30px;
+$logo-padding: 10px;
+$head-padding: 4px;
+$layout-padding: $logo-size + ($logo-padding * 2);
+$layout-padding-2: $logo-size-2 + ($logo-padding * 2);
+$layout-padding-3: $logo-size-3 + ($logo-padding * 2);
+$layout-padding-4: $logo-size-4 + ($logo-padding * 2);
+
+/*Colors*/
+$linkColor: rgb(230, 211, 65);
+$mainColor: rgb(50, 50, 191);
+//$dark-accent-color: #040941;
+$dark-accent-color: #000;
+$altColor: #f68a33;
+$textColorAccent: #fff;
+$textColor-main: rgb(46, 46, 46);
+$label-color: rgb(104, 104, 104);
+
+/*Text sizes*/
+$text-size-body-xsm: 13px;
+$text-size-body-sm: 15px;
+$text-size-body-md: 20px;
+$text-size-body-lg: 30px;
+$text-size-body-xlg: 45px;
+
+/*Headlines*/
+$text-size-head-xsm: 18px;
+$text-size-head-sm: 20px;
+$text-size-head-md: 35px;
+$text-size-head-lg: 50px;
+$text-size-head-xl: 70px;
